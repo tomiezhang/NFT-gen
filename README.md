@@ -1,2 +1,2 @@
 # NFT-gen
-## 作者的儿子：**bobyang**
+## 一个NFT创作平台
