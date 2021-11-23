@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>主页</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% if username %}
+            <p>{{username}}，欢迎来到主页！ <a href="{{ url_for('panel') }}">个人中心</a> <a href="{{ url_for('logout') }}">注销</a></p>
+            {% if project %}
+                <h3>项目清单：</h3>
+                <ul>
+                    {% for foo in project %}
+                        <li>{{ foo.projectname}} <img height="300" src="{{foo.pic}}"></li>
+                    {% endfor %}
+                </ul>
+                <a href="{{ url_for('creat_project') }}">添加项目</a>
+            {% else %}
+                <h3>您暂无项目！</h3>
+                <a href="{{ url_for('creat_project') }}">添加项目</a>
+            {% endif %}
+        {% else %}
+            <p>欢迎来到主页！ <a href="{{ url_for('login') }}">登录</a> <a href="{{ url_for('regist') }}">注册</a></p>
+        {% endif %}
+    </body>
+</html>
