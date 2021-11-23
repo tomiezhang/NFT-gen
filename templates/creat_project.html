@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>新建项目</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <style>
+    .error{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <form id="commentForm" method="post" action='/creat_project'>
+        <label>项目名：<input type="text" name="projectname" value="" required></label></br>
+        <hr>
+    <hgroup>
+        <input type="hidden" name="background" id="background" value="">
+        <label>背景图1: <input type="file" name="itemBg1" id="itemBg1" onchange="postData(this.id,'background')" value="" required></label><br/>
+        <label>背景图2: <input type="file" name="itemBg2" id="itemBg2"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图3: <input type="file" name="itemBg3" id="itemBg3"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图4: <input type="file" name="itemBg4" id="itemBg4"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图5: <input type="file" name="itemBg5" id="itemBg5"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图6: <input type="file" name="itemBg6" id="itemBg6"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图7: <input type="file" name="itemBg7" id="itemBg7"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图8: <input type="file" name="itemBg8" id="itemBg8"  onchange="postData(this.id,'background')"   value="" required></label><br/>
+        <label>背景图9: <input type="file" name="itemBg9" id="itemBg9"  onchange="postData(this.id,'background')"  value="" required></label>
+         <hr>
+        <input type="hidden" name="face" id="face" value="">
+        <label>脸部图1: <input type="file" name="itemFace1" id="itemFace1" onchange="postData(this.id,'face')" value="" required></label><br/>
+        <label>脸部图2: <input type="file" name="itemFace2" id="itemFace2"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图3: <input type="file" name="itemFace3" id="itemFace3"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图4: <input type="file" name="itemFace4" id="itemFace4"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图5: <input type="file" name="itemFace5" id="itemFace5"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图6: <input type="file" name="itemFace6" id="itemFace6"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图7: <input type="file" name="itemFace7" id="itemFace7"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图8: <input type="file" name="itemFace8" id="itemFace8"  onchange="postData(this.id,'face')"   value="" required></label><br/>
+        <label>脸部图9: <input type="file" name="itemFace9" id="itemFace9"  onchange="postData(this.id,'face')"  value="" required></label>
+         <hr>
+        <input type="hidden" name="eye" id="eye" value="">
+        <label>眼部图1: <input type="file" name="itemEye1" id="itemEye1" onchange="postData(this.id,'eye')" value="" required></label><br/>
+        <label>眼部图2: <input type="file" name="itemEye2" id="itemEye2"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图3: <input type="file" name="itemEye3" id="itemEye3"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图4: <input type="file" name="iitemEye4" id="itemEye4"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图5: <input type="file" name="itemEye5" id="itemEye5"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图6: <input type="file" name="itemEye6" id="iitemEye6"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图7: <input type="file" name="itemEye7" id="itemEye7"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图8: <input type="file" name="itemEye8" id="itemEye8"  onchange="postData(this.id,'eye')"   value="" required></label><br/>
+        <label>眼部图9: <input type="file" name="itemEye9" id="itemEye9"  onchange="postData(this.id,'eye')"  value="" required></label>
+         <hr>
+        <input type="hidden" name="ear" id="ear" value="">
+        <label>耳部图1: <input type="file" name="itemEar1" id="itemEar1" onchange="postData(this.id,'ear')" value="" required></label><br/>
+        <label>耳部图2: <input type="file" name="itemEar2" id="itemEar2"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图3: <input type="file" name="itemEar3" id="itemEar3"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图4: <input type="file" name="itemEar4" id="itemEar4"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图5: <input type="file" name="itemEar5" id="itemEar5"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图6: <input type="file" name="itemEar6" id="itemEar6"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图7: <input type="file" name="itemEar7" id="itemEar7"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图8: <input type="file" name="itemEar8" id="itemEar8"  onchange="postData(this.id,'ear')"   value="" required></label><br/>
+        <label>耳部图9: <input type="file" name="itemEar9" id="itemEar9"  onchange="postData(this.id,'ear')"  value="" required></label>
+         <hr>
+        <input type="hidden" name="mouth" id="mouth" value="">
+        <label>嘴部图1: <input type="file" name="itemMouth1" id="itemMouth1" onchange="postData(this.id,'mouth')" value="" required></label><br/>
+        <label>嘴部图2: <input type="file" name="itemMouth2" id="itemMouth2"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图3: <input type="file" name="itemMouth3" id="itemMouth3"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图4: <input type="file" name="itemMouth4" id="itemMouth4"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图5: <input type="file" name="itemMouth5" id="itemMouth5"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图6: <input type="file" name="itemMouth6" id="itemMouth6"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图7: <input type="file" name="itemMouth7" id="itemMouth7"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图8: <input type="file" name="itemMouth8" id="itemMouth8"  onchange="postData(this.id,'mouth')"   value="" required></label><br/>
+        <label>嘴部图9: <input type="file" name="itemMouth9" id="itemMouth9"  onchange="postData(this.id,'mouth')"  value="" required></label>
+         <hr>
+        <input type="hidden" name="nose" id="nose" value="">
+        <label>鼻部图1: <input type="file" name="itemNose1" id="itemNose1" onchange="postData(this.id,'nose')" value="" required></label><br/>
+        <label>鼻部图2: <input type="file" name="itemNose2" id="itemNose2"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图3: <input type="file" name="itemNose3" id="itemNose3"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图4: <input type="file" name="itemNose4" id="itemNose4"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图5: <input type="file" name="itemNose5" id="itemNose5"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图6: <input type="file" name="itemNose6" id="itemNose6"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图7: <input type="file" name="itemNose7" id="itemNose7"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图8: <input type="file" name="itemNose8" id="itemNose8"  onchange="postData(this.id,'nose')"   value="" required></label><br/>
+        <label>鼻部图9: <input type="file" name="itemNose9" id="itemNose9"  onchange="postData(this.id,'nose')"  value="" required></label>
+         <hr>
+        <script>
+            //写段脚本来上传
+            function postData(id,path){
+                let formData = new FormData();
+                formData.append("file", $("#"+id)[0].files[0]);
+                $.ajax({
+                url: "/upload/"+path,
+                type: "post",
+                data: formData,
+                processData: false, // 告诉jQuery不要去处理发送的数据
+                contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+                dataType: 'text',
+                success: function(data) {
+                    $("#"+id).next().remove();
+                    $("#"+id).after("<span><span style='color:green'>上传成功!</span></span>");
+                    let vals = $("#"+path).val();
+                    $("#"+path).val(data+"|"+vals);
+                },
+                error: function(data) {
+                    $("#"+id).after("<span><span style='color:red'>上传失败!</span></span>");
+                }
+            });
+            }
+            $().ready(function() {
+                $("#commentForm").validate();
+                $("#previw").click(function(){
+                    let background = $("#background").val(),face=$("#face").val(),eye=$("#eye").val(),ear=$("#ear").val(),nose=$("#nose").val(),mouth=$("#mouth").val();
+                    if (background!=="" || face!==""||eye!==""||ear!==""||nose!==""||mouth!==""){
+                            background = background.split("|");
+                            face = face.split("|")
+                            eye = eye.split("|")
+                            ear = ear.split("|")
+                            nose = nose.split("|")
+                            mouth = mouth.split("|")
+                            background.pop();
+                            face.pop();
+                            eye.pop();
+                            ear.pop();
+                            nose.pop();
+                            mouth.pop();
+                            console.log(background)
+                            let index = Math.floor((Math.random()*9));
+                            background = background[index];
+                            face = face[index];
+                            eye = eye[index];
+                            ear = ear[index];
+                            nose = nose[index];
+                            mouth = mouth[index];
+                            let arr = [background,face,eye,ear,nose,mouth];
+                            console.log(arr)
+                            let formData = new FormData();
+                            formData.append("data", arr);
+                            $.ajax({
+                              type : 'post',
+                              url : "/preview",
+                              processData: false,
+                                contentType: false,
+                                dataType: 'text',
+                              data:formData,
+                                success:function (data){
+                                  $("#pv_img").remove();
+                                   $("#pv_img").slideDown();
+                                    $("#previw").after("<img src='"+data+"' id='pv_img' style='position: fixed;right: 5px;top:5px;width: 350px;'>");
+                                }
+                            });
+                    }else{
+                        alert("图片没有上传够!")
+                    }
+                })
+            });
+        </script>
+    </hgroup>
+        <input type="submit" value="提交">
+        <input type="button" value="预览随机生成" id="previw">
+    </form>
+    
+    {% if error %}
+        <p>{{error}}</p>
+    {% endif %}
+</body>
+</html>
